@@ -11,12 +11,12 @@ function Nav() {
        -
        <Link to="/games">Games</Link>  
        -
-       {/* <Link to="/">APIs</Link>   */}
+       {/* <Link to="/">APIs</Link>  
        <Link to="/buildAChar">Build-A-Char</Link>  
        -
        <Link to="/writing">Writing</Link>  
        -
-       <Link to="/animations">Animations</Link>  
+       <Link to="/animations">Animations</Link>   */}
        </div>
       </>
     )

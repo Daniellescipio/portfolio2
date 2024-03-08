@@ -1,9 +1,14 @@
 
 import Nav from "../../Nav.jsx"
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Sentence from "./Sentence.jsx";
 import { structureOne, structureTwo, structureThree, structureFour, structureFive, structureSix, structureSeven, structureEight, structureNine } from "./strcture.js";
+import { ThemeContext } from "../../../ThemeConext.jsx";
 function SentenceBuilder() {
+  const {setLocation} = useContext(ThemeContext)
+  useEffect(()=>{
+    setLocation("game")
+  },[])
     return (
       <>
         <Nav/>

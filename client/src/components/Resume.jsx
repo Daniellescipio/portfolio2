@@ -1,12 +1,17 @@
-import { useState, useRef } from "react"
+import { useState, useRef, useContext, useEffect } from "react"
 import emailjs from '@emailjs/browser'
 import Nav from "./Nav"
+import { ThemeContext } from "../ThemeConext"
 
 
 function Resume() {
   const form = useRef()
   const [inputs, setInputs] = useState({user_name:"", user_email:"", message:""})
   const [sent, setSent]=useState(false)
+  const {setLocation} = useContext(ThemeContext)
+  useEffect(()=>{
+    setLocation("")
+  },[])
     function handleChange(e){
       const {name, value} = e.target
       setInputs((prevValue)=>{return{...prevValue,[name]:value}})

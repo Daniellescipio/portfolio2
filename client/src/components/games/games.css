@@ -3,6 +3,31 @@
     display: grid;
     grid-template-columns: repeat(10,125px);
 }
+/* general */
+.noSupport{
+    position: absolute;
+    width: 190px;
+
+}
+.gameFrame{
+    border: none;
+}
+.gameLink>img{
+    width: 100px;
+    height: 100px;
+}
+.gameGrid{
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+    width: 70vw;
+    margin: auto;
+}
+.gameMessage{
+    width: 500px;
+    margin: 2em auto;
+    border: 2px dashed darkcyan;
+    padding: 1em;
+}
 
 .sentenceContainer{
     font-family: "Salsa", cursive;
@@ -96,7 +121,7 @@ button.roundWhim{
     z-index: 999 !important;
 }
 .container{
-    position: relative;
+    position: absolute;
     width: 100px;
     height: 150px;
     left: 40%;
@@ -227,6 +252,25 @@ button.roundWhim{
 }
 .wildColor{
     color: black
+}
+.wildCircle{
+    /* display: grid;
+    grid-template-columns: repeat(2, 50%);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 75px;
+    height: 135px;
+    position: relative;
+    transform: rotate(0deg);
+    bottom: 0.45em; */
+}
+.smCircl >div{
+    width: 50px;
+    height: 30px;
+}
+.bgCirc >div{
+    width: 50px;
+    height: 68px;
 }
 /* wilds and draws and skips */
 .icon{

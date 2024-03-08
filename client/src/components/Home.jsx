@@ -7,12 +7,13 @@ import { useNavigate } from "react-router-dom"
 import { ThemeContext } from "../ThemeConext"
 function Home() {
     const [travel, setTravel] = useState()
-    const {theme, setTheme, open, setOpen} = useContext(ThemeContext)
+    const {theme, setTheme, open, setOpen, setLocation} = useContext(ThemeContext)
     const [hover, setHover] = useState(false)
     const container = useRef()
     const navigate = useNavigate()
     const {contextSafe} = useGSAP()
     useEffect(()=>{
+      setLocation("")
        navigate(travel)
     },[travel])
     const beforeYouGo = (location)=>{
@@ -64,7 +65,7 @@ function Home() {
       }
 
     })
-    const contents = ["Resume", "Writing","Games","buildAChar","Animations"]
+    const contents = ["Resume","Games"]//,"buildAChar","Animations", "Writing"<--coming soon
     const tableOContents= contents.map((content, index)=><li key ={index} onClick={()=>beforeYouGo(content)}>{content}</li>)
     tableOContents.push(<li key = "exit" onClick = {handleOpenAndClose} onMouseEnter={()=>setHover("exiting")}>Exit</li>)
     return (
